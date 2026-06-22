@@ -4,11 +4,31 @@
       "api_id": 38655746,
       "api_hash": "ec48ce8332c461c86b2bdaa9061c3ec6",
       "priority": 1,
+      "status": "active",
       "accounts": [
         {
           "phone": "+966501234567",
           "session": "session_1.session",
-          "status": "active"
+          "status": "active",
+          "invites_today": 0,
+          "max_invites_per_day": 50,
+          "last_reset": "2026-06-22"
+        },
+        {
+          "phone": "+966501234568",
+          "session": "session_2.session",
+          "status": "active",
+          "invites_today": 0,
+          "max_invites_per_day": 50,
+          "last_reset": "2026-06-22"
+        },
+        {
+          "phone": "+966501234569",
+          "session": "session_3.session",
+          "status": "active",
+          "invites_today": 0,
+          "max_invites_per_day": 50,
+          "last_reset": "2026-06-22"
         }
       ]
     }
@@ -17,5 +37,12 @@
     "bot_id": 8831112396,
     "bot_token": "8831112396:AAGLobG5knnoA_JufuJtn7T-Hz_L59v4eDk",
     "owner_id": 1516358968
+  },
+  "settings": {
+    "delay_min": 10,
+    "delay_max": 30,
+    "flood_wait_enabled": true,
+    "auto_account_switching": true,
+    "max_accounts": 999
   }
 }
