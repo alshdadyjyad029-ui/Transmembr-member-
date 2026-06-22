@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  transmembr:
+    build: .
+    container_name: transmembr-bot
+    environment:
+      - BOT_TOKEN=8831112396:AAGLobG5knnoA_JufuJtn7T-Hz_L59v4eDk
+      - OWNER_ID=1516358968
+      - API_ID=38655746
+      - API_HASH=ec48ce8332c461c86b2bdaa9061c3ec6
+    volumes:
+      - ./accounts.json:/app/accounts.json
+      - ./transmembr_db.json:/app/transmembr_db.json
+      - ./logs:/app/logs
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
