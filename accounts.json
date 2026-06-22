@@ -1,0 +1,21 @@
+{
+  "api_accounts": [
+    {
+      "api_id": 38655746,
+      "api_hash": "ec48ce8332c461c86b2bdaa9061c3ec6",
+      "priority": 1,
+      "accounts": [
+        {
+          "phone": "+966501234567",
+          "session": "session_1.session",
+          "status": "active"
+        }
+      ]
+    }
+  ],
+  "bot": {
+    "bot_id": 8831112396,
+    "bot_token": "8831112396:AAGLobG5knnoA_JufuJtn7T-Hz_L59v4eDk",
+    "owner_id": 1516358968
+  }
+}
