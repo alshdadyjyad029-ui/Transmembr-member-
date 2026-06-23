@@ -9,6 +9,7 @@
 import logging
 import json
 import os
+import asyncio
 from datetime import datetime
 from typing import Dict, List, Optional
 
@@ -44,7 +45,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-BOT_TOKEN = os.getenv('BOT_TOKEN', '8831112396:AAGLobG5knnoA_JufuJtn7T-Hz_L59v4eDk')
+BOT_TOKEN = os.getenv('BOT_TOKEN', '8831112396:AAHeN4Y892mgugSxfPw5km9H8vfepU4q8sE')
 OWNER_ID = int(os.getenv('OWNER_ID', '1516358968'))
 
 # =====================================================================
@@ -102,7 +103,7 @@ class TransmembrDB:
         self.save_db()
     
     def get_accounts(self) -> List:
-        """ال��صول على جميع الحسابات"""
+        """الحصول على جميع الحسابات"""
         try:
             with open('accounts.json', 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -214,7 +215,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         help_text = (
             "❓ <b>مساعدة Transmembr:</b>\n\n"
             "🔹 <b>كيفية الاستخدام:</b>\n"
-            "1️⃣ اختر "نقل أعضاء"\n"
+            "1️⃣ اختر 'نقل أعضاء'\n"
             "2️⃣ أدخل المجموعة المصدرية والهدفية\n"
             "3️⃣ حدد عدد الأعضاء\n"
             "4️⃣ انتظر اكتمال العملية\n\n"
@@ -265,8 +266,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     parse_mode="HTML"
                 )
                 
-                # عملية النقل (مثال)
-                await asyncio.sleep(2)  # محاكاة
+                # عملية النقل (محاكاة)
+                await asyncio.sleep(2)
                 
                 await update.message.reply_text(
                     f"✅ <b>تم النقل بنجاح!</b>\n\n"
@@ -306,7 +307,6 @@ async def main():
     await application.run_polling()
 
 if __name__ == "__main__":
-    import asyncio
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
